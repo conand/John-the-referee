@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block headers %}
+
+	<title>John the Referee</title>
+
+{% endblock %}
+
+
+{% block content %}
+
+	<div class="jumbotron home">
+  		<div class="container">
+	        <div class="row">
+	            <div class="col-md-4 visible-lg">
+	            </div>
+	            <div class="col-lg-12 text-center">
+	                <h1>John The Referee</h1>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-4 visible-lg">
+	            </div>
+	        </div>
+
+	        <!-- Three columns of text below the carousel -->
+            <div class="row">
+                {% for uniform in uniforms %}
+                    <div class="col-lg-4 text-center">
+                        <img class="img-circle" src="{{ url_for('static',filename='images/'+uniform.id|string+'.jpg') }}" alt="Generic placeholder image" width="140" height="140">
+                        <h2>{{uniform.name}}</h2>
+                        <p>{{ uniform.description }}</p>
+                        <p><a class="btn btn-default" href="{{ url_for('show_uniform', id=uniform.id) }}" role="button">View details &raquo;</a></p>
+                    </div>
+                {% endfor %}
+            </div><!-- /.row -->
+
+			    </div>
+			</div>
+
+{% endblock %}

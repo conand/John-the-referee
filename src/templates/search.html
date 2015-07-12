@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block headers %}
+
+	<title>John the Referee - Search</title>
+
+{% endblock %}
+
+
+{% block content %}
+
+	<div class="jumbotron home">
+  		<div class="container">
+	        <div class="row">
+	            <div class="col-md-12 text-center">
+	                <h1>Search a Uniform</h1>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-4 visible-lg  text-center">
+	            </div>
+	            <div class="col-md-12 text-center">
+	                
+	                <form class="form form-inline" name="f" method="post" action="{{ url_for('search') }}">
+						
+	                	<div class="form-group">
+							<input placeholder="Uniform name" class="form-control col-md-12" type="text" name="field" style="width: 700px; font-size: 20px">
+							<button class="btn btn-default" type="submit">Search</button>
+						</div>					
+
+
+					</form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+{% endblock %}
