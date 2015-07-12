@@ -1,5 +1,5 @@
-# John-the-referee
-John the refeee is a challenge of PoliCTF 2015
+# John the referee
+John the referee is a challenge of PoliCTF 2015
 
 ## Category
 Web
